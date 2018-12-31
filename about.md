@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Hmmm, 留到2019年再写吧
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[elaineye983@gmail.com](mailto:elaineye983@gmail.com)
