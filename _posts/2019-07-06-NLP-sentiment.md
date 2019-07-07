@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sentiment Classifier: Beneath the Surface of your Messages
+title: "Sentiment Classifier: Beneath the Surface of your Messages"
 ---
 
 ## Introduction 
