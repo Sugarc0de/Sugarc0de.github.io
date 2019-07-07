@@ -3,8 +3,6 @@ layout: post
 title: "Sentiment Classifier: Beneath the Surface of your Messages"
 ---
 
-## Introduction 
-
 Recently, I worked on a side project which allows me to perform sentiment classification in Chinese text. The program can classify any given sentence as either positive or negative.  
 
 I found this idea when I scrolled through the text between me and my boyfriend Bai on Facebook Messenger. Could statistics tell me who's more optimistic in the relationship? 
