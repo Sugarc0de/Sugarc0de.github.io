@@ -17,7 +17,7 @@ One way to achieve this is by deciding the text polarity: either positive or neg
 
 I did not use any popular Chinese sentiment dictionaries as my training data for two reasons:  
 
-1. dictionaries such as ANTUSD contain formal opinion words. However, my own text is causal, leading to a potential distribution mismatch. 
+First, dictionaries such as ANTUSD contain formal opinion words. However, my own text is causal, leading to a potential distribution mismatch. 
 
 - What is distribution mismatch and why it is bad?  
 
@@ -25,7 +25,7 @@ I did not use any popular Chinese sentiment dictionaries as my training data for
 
     <img src="/images/2_blog/9_.jpg" width="500">
 
-2. Dealing with negation words is hard. In English, words such as “not”, “but”, can appear anywhere in the sentence and change the sentiment of the entire sentence. Same rule applies to Chinese.  
+Second, dealing with negation words is hard. In English, words such as “not”, “but”, can appear anywhere in the sentence and change the sentiment of the entire sentence. Same rule applies to Chinese.  
 
 Instead, I found a GitHub repo with manually labeled text from human-computer conversational logs. The author classified each segmented sentence either positive or negative. 11577 labeled instances! That must have taken lots of manpower.  
 
