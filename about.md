@@ -9,4 +9,5 @@ Welcome! I'm Elaine, from Guangzhou. I recently graduated from the University of
 ### Contact me
 
 [elaineye983@gmail.com](mailto:elaineye983@gmail.com)
+
 LinkedIn: https://www.linkedin.com/in/elaineye/
