@@ -2,7 +2,7 @@
 
 For the past few weeks, I tried to build a board game recommmender as my side project; However, I failed to beat the baseline model. Due to time limits, I had to abort this project and move on to other stuff. Netherlevess, I feel that my failure may help those who are new to recommendation system, and that is the purpose of this blog post. I will explain some techniques I (mis)used, and problems that might cause the undesirable performance. 
 
-![board_game](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Daily/blog/board_game_blog_img/board_game.png)
+![board_game](../images/blog_3/board_game.png)
 
 
 
@@ -14,7 +14,7 @@ For the past few weeks, I tried to build a board game recommmender as my side pr
 
 There is an [online forum](<https://boardgamegeek.com/browse/boardgame>) called BoardGameGeek (BGG) that hosts board games metadata and reviews. For example, the board game Hive has a page with detailed information such as playing time, number of Players, and weight (how difficult a game is to understand). 
 
-![image_1](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Daily/blog/board_game_blog_img/hive.jpg)
+![image_1](../images/blog_3/hive.jpg)
 
 BGG also provides the XML API to get all the metadata for one or more board games. Since the API call requires gameIDs as parameters, I used *BeautifulSoup* and *Requests* to scrape them from the HTML pages. 
 
@@ -30,7 +30,7 @@ I stored all my data in MySQL, and converted them to a CSV file for data analysi
 
 BGG website allows download for single user collections, but where to get a list of usernames? Luckily, I found an easy way to obtain a list of users via [BGG's Tenth Anniversary](<https://boardgamegeek.com/microbadge/13507>) . For users in the table of Related Owners, I went to their collection pages to scrape all the rating information. The image below demonstrated how the unique username leads to that person's rating page. 
 
-![user_rating](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Daily/blog/board_game_blog_img/user_rating.jpg)
+![user_rating](../images/blog_3/user_rating.jpg)
 
 To preserve hierarchical structured relationship, I stored username, game title, and user rating as a JSON object. 
 
@@ -42,7 +42,7 @@ The collection process inevitably introduced some biases, since users who did no
 
 ### Collaborative Filtering 
 
-There are two main types of Collaborative Filtering: User-Based Collaborative Filtering (UBCF) and Item-Based Collaborative Filtering (IBCF). The picture below is a good explanation of their differences. ![cf_example](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Daily/blog/board_game_blog_img/CF_examples.jpg)
+There are two main types of Collaborative Filtering: User-Based Collaborative Filtering (UBCF) and Item-Based Collaborative Filtering (IBCF). The picture below is a good explanation of their differences. ![cf_example](../images/blog_3/CF_examples.jpg)
 
 Picture Source: <http://www.diva-portal.org/smash/get/diva2:1111865/FULLTEXT01.pdf>
 
