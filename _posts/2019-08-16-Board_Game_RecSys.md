@@ -46,7 +46,7 @@ The collection process inevitably introduced some biases, since users who did no
 
 There are two main types of Collaborative Filtering: User-Based Collaborative Filtering (UBCF) and Item-Based Collaborative Filtering (IBCF). The picture below is a good explanation of their differences. 
 
-![CF_examples]("../images/blog_3/CF_examples.jpg")
+![CF_examples](../images/blog_3/CF_examples.jpg)
 
 Picture Source: <http://www.diva-portal.org/smash/get/diva2:1111865/FULLTEXT01.pdf>
 
