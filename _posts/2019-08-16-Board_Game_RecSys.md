@@ -1,4 +1,7 @@
-## Lessons Learned from my Failure in Building a Recommender System 
+---
+layout: post
+title: "Lessons Learned from my Failure in Building a Recommender System"
+---
 
 For the past few weeks, I tried to build a board game recommmender as my side project; However, I failed to beat the baseline model. Due to time limits, I had to abort this project and move on to other stuff. Netherlevess, I feel that my failure may help those who are new to recommendation system, and that is the purpose of this blog post. I will explain some techniques I (mis)used, and problems that might cause the undesirable performance. 
 
@@ -6,7 +9,7 @@ For the past few weeks, I tried to build a board game recommmender as my side pr
 
 
 
-####For folks who look for an ultimate solution to recommender system, this is not the right place.
+#### For folks who look for an ultimate solution to recommender system, this is not the right place.
 
 
 
@@ -59,9 +62,8 @@ On the contrary, I conducted offline experiments and chose the number of board g
 The first step before carryinig UBCF was to construct the user-item rating matrix. In fact, every user only rated a tiny fraction of all games. The rated games were on a scale of 1 to 10, with 1 being "Awful" and 10 being "Outstanding". When I had 500 users and 3886 board games, only 2% of the matrix were filled with actual ratings. 
 
 In my first attempt, I replaced all missing values with zeros and applied cosine similarity to the user vectors. The formula is as follows: 
-$$
-sim(i,j) = cos(\vec{i},\vec{j}) = \frac{\vec{i}*\vec{j}}{\|\vec{i}\|*\|\vec{j}\|}
-$$
+
+$$sim(i,j) = cos(\vec{i},\vec{j}) = \frac{\vec{i}*\vec{j}}{\|\vec{i}\|*\|\vec{j}\|}$$
 
 
 I even took care of the fact that some users might always rank a game higher than others, and added back the mean of a user in the prediction formula: 
