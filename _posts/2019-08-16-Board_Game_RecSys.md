@@ -63,7 +63,7 @@ The first step before carryinig UBCF was to construct the user-item rating matri
 
 In my first attempt, I replaced all missing values with zeros and applied cosine similarity to the user vectors. The formula is as follows: 
 
-$$sim(i,j) = cos(\vec{i},\vec{j}) = \frac{\vec{i}*\vec{j}}{\|\vec{i}\|*\|\vec{j}\|}$$
+$sim(i,j) = cos(\vec{i},\vec{j}) = \frac{\vec{i}*\vec{j}}{\|\vec{i}\|*\|\vec{j}\|}$
 
 I even took care of the fact that some users might always rank a game higher than others, and added back the mean of a user in the prediction formula: 
 $$
@@ -93,7 +93,7 @@ RMSE = \sqrt{\frac{1}{\|{J}\|}\sum_{(u,i)\in J}(\widehat{r_{u,i}}-r_{u,i})^2}
 $$
 It is self-explanatory that RMSE would penalize large errors. For example, say my predicted rating of user $i$ for the game Hive is 8 (Very good) , but user $i$ thinks terribly of that game and only gives a 3 (Bad) , RMSE would then be $(8-3)^2=25$ (big!) . 
 
-I also set up a baseline model which predicted constant for every user, that is, simply took the mean rating of the user as the prediction. **It turned out that the UBCF method could reach a RMSE score so close to the baseline, up to 2 decimals, but never beat the baseline. **
+I also set up a baseline model which predicted constant for every user, that is, simply took the mean rating of the user as the prediction. **It turned out that the UBCF method could reach a RMSE score so close to the baseline, up to 2 decimals, but never beat the baseline.**
 
 A t-test also confirmed that the UBCF model did not outperform the baseline. In fact, 99% of the time, it predicted the same as the baseline.
 
