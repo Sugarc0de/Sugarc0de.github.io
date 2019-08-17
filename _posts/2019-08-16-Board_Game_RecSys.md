@@ -102,7 +102,7 @@ My experiments showed that for recommender systems, the baseline is actually har
 
 Data preprocessing (including how to handle missing data), although often overlooked, is an important part of the model. Meanwhile, [Matrix Factorization](<https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)>) is another collaboritive filtering method that works well with sparse matrix. It decomposes the matrix into one user matrix and one item matrix, while preserving more information. 
 
-Hope that this post can help you avoid some mistakes before jumping into your own recommender system! 
+Hope that this post can help you avoid some mistakes before jumping into your own recommender system :)
 
 
 
