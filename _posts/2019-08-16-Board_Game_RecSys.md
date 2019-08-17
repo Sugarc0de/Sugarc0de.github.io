@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Lessons Learned from my Failure in Building a Recommender System"
+usemathjax: true
 ---
-
 For the past few weeks, I tried to build a board game recommmender as my side project; However, I failed to beat the baseline model. Due to time limits, I had to abort this project and move on to other stuff. Netherlevess, I feel that my failure may help those who are new to recommendation system, and that is the purpose of this blog post. I will explain some techniques I (mis)used, and problems that might cause the undesirable performance. 
 
 ![board_game](../images/blog_3/board_game.png)
@@ -64,7 +64,6 @@ The first step before carryinig UBCF was to construct the user-item rating matri
 In my first attempt, I replaced all missing values with zeros and applied cosine similarity to the user vectors. The formula is as follows: 
 
 $$sim(i,j) = cos(\vec{i},\vec{j}) = \frac{\vec{i}*\vec{j}}{\|\vec{i}\|*\|\vec{j}\|}$$
-
 
 I even took care of the fact that some users might always rank a game higher than others, and added back the mean of a user in the prediction formula: 
 $$
