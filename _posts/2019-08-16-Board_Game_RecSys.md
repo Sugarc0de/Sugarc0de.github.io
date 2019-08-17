@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Lessons Learned from my Failure in Building a Recommender System"
-usemathjax: true
 ---
 For the past few weeks, I tried to build a board game recommmender as my side project; However, I failed to beat the baseline model. Due to time limits, I had to abort this project and move on to other stuff. Netherlevess, I feel that my failure may help those who are new to recommendation system, and that is the purpose of this blog post. I will explain some techniques I (mis)used, and problems that might cause the undesirable performance. 
 
@@ -45,7 +44,9 @@ The collection process inevitably introduced some biases, since users who did no
 
 ### Collaborative Filtering 
 
-There are two main types of Collaborative Filtering: User-Based Collaborative Filtering (UBCF) and Item-Based Collaborative Filtering (IBCF). The picture below is a good explanation of their differences. ![cf_example](../images/blog_3/CF_examples.jpg)
+There are two main types of Collaborative Filtering: User-Based Collaborative Filtering (UBCF) and Item-Based Collaborative Filtering (IBCF). The picture below is a good explanation of their differences. 
+
+![CF_examples]("../images/blog_3/CF_examples.jpg")
 
 Picture Source: <http://www.diva-portal.org/smash/get/diva2:1111865/FULLTEXT01.pdf>
 
@@ -63,18 +64,16 @@ The first step before carryinig UBCF was to construct the user-item rating matri
 
 In my first attempt, I replaced all missing values with zeros and applied cosine similarity to the user vectors. The formula is as follows: 
 
-$sim(i,j) = cos(\vec{i},\vec{j}) = \frac{\vec{i}*\vec{j}}{\|\vec{i}\|*\|\vec{j}\|}$
+<img src="../images/blog_3/cosine_sim.jpg" width="400">
 
 I even took care of the fact that some users might always rank a game higher than others, and added back the mean of a user in the prediction formula: 
-$$
-r_{ik} = \bar{r_i} + \frac{\sum_{j \in P} sim(i, j) * (r_{jk}-\bar{r_j})}{\sum_{j \in P} sim(i, j)}
-$$
-The second term of the right-hand side equation represents the weighted average of all the similar users (in set $P$) to person $i$ ; Together with the first term, it forms the predicted rating of user $i$ to item $k$ . 
 
+<img src="../images/blog_3/prediction.jpg" width="400">
 
-
-Everything seemed reasonable, except that **I made a mistake of falsely handling the missing values.** 
-
+The second term of the right-hand side equation represents the weighted average of all the similar users (in set P) to person i; Together with the first term, it forms the predicted rating of user i to item k.   
+  
+  
+Everything seemed reasonable, except that **I made a mistake of falsely handling the missing values.**  
 
 
 Think about it, if 1 represents "dislike", 0 would just means "super dislike". In theory, the cosine similarity between two users should be based solely on their co-rated items; however, if one user has not rated one game while the other did, they become more dissimilar in that dimension as zero plays a role. 
@@ -88,10 +87,8 @@ Later, I realized my mistake and replaced the missing data with the mean rating 
 I reserved the first 3 highest scored games of every user as training data, and the rest as test data. There were 500 users and 38488 predictions made by UBCF algorithm and baseline.
 
 Root Mean Square Error (RMSE) is a good way to quantify the errors in recommender system. The formula is as follows: 
-$$
-RMSE = \sqrt{\frac{1}{\|{J}\|}\sum_{(u,i)\in J}(\widehat{r_{u,i}}-r_{u,i})^2}
-$$
-It is self-explanatory that RMSE would penalize large errors. For example, say my predicted rating of user $i$ for the game Hive is 8 (Very good) , but user $i$ thinks terribly of that game and only gives a 3 (Bad) , RMSE would then be $(8-3)^2=25$ (big!) . 
+
+<img src="../images/blog_3/rmse.jpg" width="400">
 
 I also set up a baseline model which predicted constant for every user, that is, simply took the mean rating of the user as the prediction. **It turned out that the UBCF method could reach a RMSE score so close to the baseline, up to 2 decimals, but never beat the baseline.**
 
