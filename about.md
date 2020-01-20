@@ -10,6 +10,6 @@ Welcome! I'm Elaine, from Guangzhou. I recently graduated from the University of
 
 Email: [elaineye983@gmail.com](mailto:elaineye983@gmail.com)
 
-[Resume (PDF)](https://sugarc0de.github.io/images/elaine_resume_072319.pdf)
+[Resume (PDF)](https://sugarc0de.github.io/images/elaine_resume_Jan_2020.pdf)
 
 [LinkedIn](https://www.linkedin.com/in/elaineye/)
