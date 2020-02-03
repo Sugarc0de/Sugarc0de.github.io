@@ -7,7 +7,7 @@ title: "NLP Project -- Pronounciation Prediction for Teochew Dialect (Part 1)"
 
 Lately, inspired by my boyfriend's [post](<https://luckytoilet.wordpress.com/2019/07/16/learning-the-teochew-chaozhou-dialect/>), I decided to take a deeper look at my mother tongue -- Teochew dialect. It is a dialect of the Southern Min, China; However, it has a very different tonal system from Mandarin that Teochew people would call it a language. Below is the highlight taken from a [video snippet](<https://www.youtube.com/watch?v=5_bm_3Rc3To&t=1s>) about Teochew tones. 
 
-<iframe width="640" height="480" src="https://ytcropper.com/embed/k25e37a3a7eda57/loop/noautoplay/" frameborder="0" allowfullscreen></iframe><a href="/" target="_blank">via ytCropper</a>
+<video src="https://www.youtube.com/watch?v=k2tapGHEN2Y&t=16s" poster="/images/blog5/teochew_video_poster.jpg" width="320" height="200" controls preload></video>
 
 As a native speaker, it is easy to speak the language but hard to spot the grammer rules. Therefore, this NLP project is created to explore the pronunciation patterns for the Teochew dialect. The end goal is for a machine to guess the pronounciation for words in Teochew given its Mandarin counterpart. 
 
@@ -41,9 +41,7 @@ The column named **BENZI_IN_SOURCE_teo** is where the Chinese characters corresp
 
 #### Explode
 
-This Pandas function *Explode* is exactly as it suggests, that is, to "explode" list-like elements of the DataFrame into many rows. For example, I first converted the column "三十夜" into `[’三‘, ‘十’, ‘夜’]`, then do the *explode* operation to put these three characters into three different rows. The step-by-step code is shown below.  
-
-![code_1](/images/blog5/code_1-0690419.jpg)
+This Pandas function *Explode* is exactly as it suggests, that is, to "explode" list-like elements of the DataFrame into many rows. For example, I first converted the column "三十夜" into `[’三‘, ‘十’, ‘夜’]`, then do the *explode* operation to put these three characters into three different rows. 
 
 The last thing is to combine all the "exploded" DataFrames into one. Now we have successfully converted the DataFrame into a long format. 
 
