@@ -5,9 +5,9 @@ title: "NLP Project -- Pronounciation Prediction for Teochew Dialect (Part 1)"
 
 ![dialect_meme](/images/blog5/dialect_meme.jpeg)
 
-Lately, inspired by my boyfriend's [post](<https://luckytoilet.wordpress.com/2019/07/16/learning-the-teochew-chaozhou-dialect/>), I decided to take a deeper look at my mother tongue -- Teochew dialect. It is a dialect of the Southern Min, China; However, it has a very different tonal system from Mandarin that Teochew people would call it a language. Below is the highlight taken from a [video snippet](<https://www.youtube.com/watch?v=5_bm_3Rc3To&t=1s>) about Teochew tones. 
+Lately, inspired by my boyfriend's [post](<https://luckytoilet.wordpress.com/2019/07/16/learning-the-teochew-chaozhou-dialect/>), I decided to take a deeper look at my mother tongue -- Teochew dialect. It is a dialect of the Southern Min, China; However, it has a very different tonal system from Mandarin that Teochew people would call it a language. Below is the highlight taken from a [video snippet](<https://www.youtube.com/watch?v=k2tapGHEN2Y>) about Teochew tones. 
 
-<video src="https://www.youtube.com/watch?v=k2tapGHEN2Y&t=16s" poster="/images/blog5/teochew_video_poster.jpg" width="320" height="200" controls preload></video>
+<video src="https://youtu.be/k2tapGHEN2Y" poster="/images/blog5/teochew_video_poster.jpg" width="320" height="200" controls preload></video>
 
 As a native speaker, it is easy to speak the language but hard to spot the grammer rules. Therefore, this NLP project is created to explore the pronunciation patterns for the Teochew dialect. The end goal is for a machine to guess the pronounciation for words in Teochew given its Mandarin counterpart. 
 
