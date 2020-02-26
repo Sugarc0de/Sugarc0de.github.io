@@ -98,7 +98,7 @@ Mandarin fourth tone  ​ :arrow_right:    Teochew low rising tone (213)
 
 Let's look at some interesting initials where Mandarin and Teochew's sound differently.
 
-<img src='/images/blog6/fx-initial.png' width=60%>
+<img src="/images/blog6/fx-initial.png" width="60%">
 
 Mandarin has two voiceless fricatives *f* and *x* that does not exist in Teochew. For example, 
 
@@ -124,7 +124,7 @@ People who are native speakers of Teochew often struggle to pronounce the *f* so
 
 J and q are other groups where the sounds of initials have changed. 
 
-<img src='/images/blog6/jq-initial.png' width=60%>
+<img src="/images/blog6/jq-initial.png" width="60%">
 
 From the plot above, we see 67% of the initial *j* is pronounced as *k* in Teochew. *kʰ* accounts for only 6%, is pronounced similar to *k*, except that the latter forces more air and vibration from the back of our tongue. 
 
@@ -150,7 +150,7 @@ Some examples of *j* and *q* are shown below:
 
 Due to a large number of varieties in the Teochew finals, the correspondence is more irregular. Nevertheless, there are some patterns in the following examples: 
 
-<img src='/images/blog6/ang-ing-ong.png' width=70%>
+<img src="/images/blog6/ang-ing-ong.png" width="70%">
 
 The nasal final is a final that combines a vowel with a nasal consonant *-n* or *-ng*. *ang* and *ong* are two examples of the back nasal finals. 
 
