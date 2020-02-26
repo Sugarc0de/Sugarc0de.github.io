@@ -13,13 +13,13 @@ If you are interested in seeing how a computer (who is smart enough to understan
 
 
 
-### Initials, Finals, and Tones
+## Initials, Finals, and Tones
 
 As I mentioned in my previous blog post, initials, finals, and tones are three essential features for my analysis. But what exactly are they? 
 
 
 
-#### Teochew
+### Teochew
 
 Let's first talk about those of the Teochew dialect. In this dataset, Teochew initials and finals adopt syllables in the IPA convention. 
 
@@ -41,7 +41,7 @@ People who learn Teochew might notice that the above citation tones become their
 
 
 
-#### Mandarin
+### Mandarin
 
 Mandarin, also called Standard Chinese, comes with a set of syllables known as Pinyin. Like IPA, Pinyin comprises of initials, finals, and tones. 
 
@@ -53,13 +53,13 @@ There are five tones in Mandarin, including a neutral tone. In my [previous post
 
 
 
-### Multi-Target Classification 
+## Multi-Target Classification 
 
 The goal was to explore the one to one correspondence between Mandarin and Teochew. There are 24 unique initials, and 36 finals, and 4 tones found in the Mandarin column, corresponding to 18 initials, 73 finals, and 8 tones in the Teochew column of my dataset. It is natural to treat it as a multi-target classification problem. Our inputs/outputs are initials, finals, and tones from Mandarin/Teochew. 
 
 
 
-### Assumptions About the Data
+## Assumptions About the Data
 
 My baseline is based on a naive assumption; that is, each feature in Mandarin only affects the corresponding feature of Teochew. Under this assumption, Teochew initials, finals, and tones are predicted independently. 
 
@@ -67,11 +67,11 @@ Let's make some plots to see the intuition behind the assumption!
 
 
 
-#### Everyone Appreciates Beautiful Graphs, Huh
+### Everyone Appreciates Beautiful Graphs, Huh
 
 
 
-##### 1. Tones
+#### 1. Tones
 
 Below are four plots that show the percentage of corresponding Teochew tones for each Mandarin's. 
 
@@ -94,7 +94,7 @@ Mandarin fourth tone  ​ :arrow_right:    Teochew low rising tone (213)
 </p>
 
 
-##### 2. Initials
+#### 2. Initials
 
 Let's look at some interesting initials where Mandarin and Teochew's sound differently.
 
@@ -102,7 +102,7 @@ Let's look at some interesting initials where Mandarin and Teochew's sound diffe
 
 Mandarin has two voiceless fricatives *f* and *x* that does not exist in Teochew. For example, 
 
-```發 (fa) ​:arrow_right:​  huek
+```
 # f sound in Pinyin
 發: (f)a1  - (h)uek21  
 反: (f)an3 - (h)ueŋ35
@@ -146,7 +146,7 @@ Some examples of *j* and *q* are shown below:
 
 
 
-##### 3. Finals
+#### 3. Finals
 
 Due to a large number of varieties in the Teochew finals, the correspondence is more irregular. Nevertheless, there are some patterns in the following examples: 
 
@@ -190,7 +190,7 @@ Exactly how much is this interaction is left to be found in the analysis.
 
 
 
-### Proposed Methods
+## Proposed Methods
 
 I used both random forests and a one hidden layer neural network as two separate methods compared to the baseline. 
 
@@ -200,7 +200,7 @@ Since all my features are categorical values, all the input data are converted t
 
 
 
-#### Random Forest
+### Random Forest
 
 ![random_forest](/images/blog6/random_forest.jpg)
 
@@ -210,7 +210,7 @@ I trained 3 separate random forest classifiers. The first classifier takes in al
 
 
 
-#### Neural Network
+### Neural Network
 
 A neural network is flexible in terms of the number of outputs we can have. Therefore, instead of training three separate random forests, I trained one hidden layer neural network to predict all three things at the same time. The architecture of my neural network is defined as follows: 
 
@@ -220,7 +220,7 @@ The networks concatenate three vectors of inputs and perform a linear transforma
 
 
 
-### Evaluation
+## Evaluation
 
 If you have followed through, there must be a question you are curious to find out: how much interaction is among Mandarin initials, finals, and tones? 
 
@@ -234,7 +234,7 @@ Among all three predictors, initials appear to have the best evaluation score, f
 
 
 
-### Conclusions
+## Conclusions
 
 By exploring the relationship between the Teochew and Mandarin languages, we successfully taught a computer to predict Teochew's linguistic components. Due to the limited data size and noisy features, we are unable to learn the interactions among the components. Future work extends to the relationship of more closely related languages like Cantonese and Teochew. More fined-grained features on Teochew finals and increased dataset size are expected to produce more desirable results. 
 
