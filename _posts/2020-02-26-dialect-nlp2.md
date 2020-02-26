@@ -1,8 +1,9 @@
-# NLP Project -- Pronounciation Prediction for Teochew Dialect (Part 2)
+---
+layout: post
+title: "NLP Project -- Pronounciation Prediction for Teochew Dialect (Part 2)"
+---
 
-
-
-![header_pic](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/header_pic.jpg)
+![header_pic](/images/blog6/header_pic.jpg)
 
 
 
@@ -28,7 +29,7 @@ Table below is taken from Wikipedia.
 
 
 
-<img src='/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/table_teochew_final.png' width='80%'>
+<img src='/images/blog6/table_teochew_final.png' width='80%'>
 
 
 
@@ -74,27 +75,30 @@ Let's make some plots to see the intuition behind the assumption!
 
 Below are four plots that show the percentage of corresponding Teochew tones for each Mandarin's. 
 
-![tones_plot](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/tone_plot.png)
+![tones_plot](/images/blog6/tone_plot.png)
 
 The first three plots indicate the absolute majority of the corresponding Teochew tones that is over 50 per cent, while the bottom right one has a majority that is under 50 per cent. 
 
 
-
+<p align="center">
 Mandarin first tone       ​ :arrow_right:    Teochew mid tone (33)
-
+</p>
+<p align="center">
 Mandarin second tone  :arrow_right:    Teochew high tone (55)
-
+</p>  
+<p align="center">
 Mandarin third tone     ​ :arrow_right:    Teochew falling tone (53)
-
+</p>
+<p align="center">
 Mandarin fourth tone  ​ :arrow_right:    Teochew low rising tone (213)
-
+</p>
 
 
 ##### 2. Initials
 
 Let's look at some interesting initials where Mandarin and Teochew's sound differently.
 
-<img src='/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/fx-initial.png' width=60%>
+<img src='/images/blog6/fx-initial.png' width=60%>
 
 Mandarin has two voiceless fricatives *f* and *x* that does not exist in Teochew. For example, 
 
@@ -120,7 +124,7 @@ People who are native speakers of Teochew often struggle to pronounce the *f* so
 
 J and q are other groups where the sounds of initials have changed. 
 
-<img src='/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/jq-initial.png' width=60%>
+<img src='/images/blog6/jq-initial.png' width=60%>
 
 From the plot above, we see 67% of the initial *j* is pronounced as *k* in Teochew. *kʰ* accounts for only 6%, is pronounced similar to *k*, except that the latter forces more air and vibration from the back of our tongue. 
 
@@ -146,7 +150,7 @@ Some examples of *j* and *q* are shown below:
 
 Due to a large number of varieties in the Teochew finals, the correspondence is more irregular. Nevertheless, there are some patterns in the following examples: 
 
-<img src='/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/ang-ing-ong.png' width=70%>
+<img src='/images/blog6/ang-ing-ong.png' width=70%>
 
 The nasal final is a final that combines a vowel with a nasal consonant *-n* or *-ng*. *ang* and *ong* are two examples of the back nasal finals. 
 
@@ -170,7 +174,7 @@ It seems that Mandarin and Teochew have a strong correspondence between back nas
 
 
 
-​                                                                                         :fire:
+​                                                                                   <p align="center">:fire:</p>
 
 
 
@@ -198,7 +202,7 @@ Since all my features are categorical values, all the input data are converted t
 
 #### Random Forest
 
-![random_forest](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/random_forest.jpg)
+![random_forest](/images/blog6/random_forest.jpg)
 
 Random forests are an ensemble tree-based method that predicts the result based on votes from the majority. It has two layers of randomness. 1) For each decision tree, we bootstrap from a portion of (or all of) the training data, having enough sample varieties in the trees. 2) For each node in a tree, we randomly select a subset of features to decide the max split. Based on these two features, random forests outperform many algorithms in the Kaggle competition. 
 
@@ -210,7 +214,7 @@ I trained 3 separate random forest classifiers. The first classifier takes in al
 
 A neural network is flexible in terms of the number of outputs we can have. Therefore, instead of training three separate random forests, I trained one hidden layer neural network to predict all three things at the same time. The architecture of my neural network is defined as follows: 
 
-<img src='/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/nn_structure.png' width='70%'>
+<img src='/images/blog6/nn_structure.png' width='70%'>
 
 The networks concatenate three vectors of inputs and perform a linear transformation on the joined vector, followed by a rectified linear unit on each neuron. After that, the neurons are mapped to three separate linear transformations to predict multi outputs. The custom loss function is the sum of all three cross-entropy losses for tones, initials, and finals. Based on experience, I chose the number of hidden neurons to be 75% of the input features. 
 
@@ -222,7 +226,7 @@ If you have followed through, there must be a question you are curious to find o
 
 Table below shows the evaluation accuracy for three methods. 
 
-![accuracy](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog6/accuracy.png)
+![accuracy](/images/blog6/accuracy.png)
 
 The majority baseline performs slightly better than the random forests and neural network methods. We can conclude that in this dataset, there is **little evidence to imply an interaction among tones, initials, and finals**. 
 
