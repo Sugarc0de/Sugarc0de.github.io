@@ -1,4 +1,7 @@
-## Building a Vocabulary Highlighting App
+---
+layout: post
+title: "Building a Vocabulary Highlighting App"
+---
 
 In this blog post, I am excited to share about my recent web app: VocabAssist. The app eases the pain for ESL students like me to look up each unfamiliar English words in an article. Once you specify the English text and your level in [CEFR](<https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages>) framework, difficult vocabulary will be auto highlighted with their meanings. 
 
@@ -6,7 +9,7 @@ Below is the snippet of my app, of which the text was imported from the exerpt I
 
 
 
-<img src="/images/blog7/app_page.png" width="90%">
+<img src="/images/blog7/app_page.png" width="80%">
 
 
 
@@ -22,7 +25,7 @@ Otherwise, I will go over the tech stack I used for this project.
 
 
 
-<img src="/images/blog7/google_crawl.png">
+<img src="/images/blog7/google_crawl.png" width="80%">
 
 
 
