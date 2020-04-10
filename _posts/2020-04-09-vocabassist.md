@@ -13,7 +13,7 @@ Below is the snippet of my app, of which the text was imported from the exerpt I
 
 
 
->In case you can't wait to dive into the app yourself, the spoiler is here: www.vocabassist.com
+In case you can't wait to dive into the app yourself, the spoiler is here: www.vocabassist.com
 
 Otherwise, I will go over the tech stack I used for this project. 
 
@@ -25,7 +25,7 @@ Otherwise, I will go over the tech stack I used for this project.
 
 
 
-<img src="/images/blog7/google_crawl.png" width="80%">
+<img src="/images/blog7/google_crawl.png">
 
 
 
