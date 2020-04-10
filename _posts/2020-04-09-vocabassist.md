@@ -13,7 +13,7 @@ Below is the snippet of my app, of which the text was imported from the exerpt I
 
 
 
-In case you can't wait to dive into the app yourself, the spoiler is here: www.vocabassist.com
+In case you can't wait to dive into the app yourself, the spoiler is here: [www.vocabassist.com](<http://vocabassist.com/>)
 
 Otherwise, I will go over the tech stack I used for this project. 
 
@@ -29,7 +29,7 @@ Otherwise, I will go over the tech stack I used for this project.
 
 
 
-Check out this post: <https://snipcart.com/spa-seo> if you are interested in learning SEO for SPA. 
+Check out [this post](<https://snipcart.com/spa-seo>) if you are interested in learning SEO for SPA. 
 
 Finally, [Element UI](<https://element.eleme.cn/2.0/#/en-US>) provides various components from buttons to dropdowns, with custom styling, and are ready to use in Vue.js. 
 
