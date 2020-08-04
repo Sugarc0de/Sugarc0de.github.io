@@ -4,7 +4,7 @@ In this blog post, I want to talk about BERT and its architecture from a practic
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/attention.png" width=50%>
+<img src="/images/blog8/attention.png" width=50%>
 
 
 
@@ -24,7 +24,7 @@ The Transformer encoder (Vaswani et al., 2017) is the building block of BERT. Th
 
 
 
-![transformer](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/transformer.png)
+![transformer](/images/blog8/transformer.png)
 
 
 
@@ -36,7 +36,7 @@ One training sample can have all the inputs "I like ice cream", together with th
 
 
 
-![input_output](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/input_output.png)
+![input_output](/images/blog8/input_output.png)
 
 
 
@@ -58,7 +58,7 @@ The original paper has multiple attention heads to improve performance, as oppos
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/up.png" width=10%>
+<img src="/images/blog8/up.png" width=10%>
 
 
 
@@ -96,7 +96,7 @@ To quickly experiment with BERT, I do not fine-tune the model myself and instead
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/dot_break.png"  width=30%>
+<img src="/images/blog8/dot_break.png"  width=30%>
 
 
 
@@ -110,7 +110,7 @@ For example, consider the following text:
 
 
 
-![entry_1](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/entry_1.png)
+![entry_1](/images/blog8/entry_1.png)
 
 
 
@@ -120,7 +120,7 @@ And when we present three choices to BERT, it picks the correct one with the hig
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/entry_1_ans.png" width=70%>
+<img src="/images/blog8/entry_1_ans.png" width=70%>
 
 
 
@@ -128,7 +128,7 @@ What about girl's makeup :lipstick:
 
 
 
-![bert_entry_2](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/bert_entry_2.png)
+![bert_entry_2](/images/blog8/bert_entry_2.png)
 
 
 
@@ -136,7 +136,7 @@ Here is the answer from BERT:
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/bert_entry_2_ans.png" width=70%>
+<img src="/images/blog8/bert_entry_2_ans.png" width=70%>
 
 
 
@@ -146,7 +146,7 @@ One more example:
 
 
 
-![bert_entry_3_ans](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/bert_entry_3_ans.png)
+![bert_entry_3_ans](/images/blog8/bert_entry_3_ans.png)
 
 
 
@@ -154,7 +154,7 @@ And here is BERT's answer,
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/bert_entry_3.png" width=70%>
+<img src="/images/blog8/bert_entry_3.png" width=70%>
 
 
 
@@ -162,7 +162,7 @@ Who doesn't like pandas?
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/import_pandas.png" width=80%>
+<img src="/images/blog8/import_pandas.png" width=80%>
 
 
 
@@ -178,7 +178,7 @@ Here I choose the two-line poem titled "A Generation", composed by the famous co
 
 
 
-![chinese-bert](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/chinese-bert.png)
+![chinese-bert](/images/blog8/chinese-bert.png)
 
 
 
@@ -191,7 +191,7 @@ And here are the top nine results from BERT:
 
 
 
-![chinese-results](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/chinese-results.png)
+![chinese-results](/images/blog8/chinese-results.png)
 
 
 
@@ -199,7 +199,7 @@ Those look reasonable, and I want to end this blog post by the original sentence
 
 
 
-<img src="/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/gucheng.jpg" width=70%>
+<img src="/images/blog8/gucheng.jpg" width=70%>
 
 
 
@@ -214,7 +214,7 @@ Here are BERT's answers :pig:
 
 
 
-![end](/Users/elaineye/Documents/iCloud Drive (Archive)/Documents/Sugarc0de.github.io/images/blog8/end.png)
+![end](/images/blog8/end.png)
 
 
 
