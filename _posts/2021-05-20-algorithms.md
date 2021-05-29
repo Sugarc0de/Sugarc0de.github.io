@@ -19,7 +19,7 @@ The solutions are written in Python and posted to my GitHub repo. Hope that you 
 
 <img src="/images/blog9/dog_meet_idols.png" width="400">
 
-Dog wants to meet as many idols as possible at a conference. He has to sleep 12 hours every day but can choose when to sleep. Each idol appears at a fixed time every day, and Dog sleeps for 12 hours at the same time every day. Assume dog has at most $10^6$ idols and each of them show up at a time (float) t such that $0 \leq t \leq 24$, how many idols can he meets given a list of showup time in `idols`?
+Dog wants to meet as many idols as possible at a conference. He has to sleep 12 hours every day but can choose when to sleep. Each idol appears at a fixed time every day, and Dog sleeps for 12 hours at the same time every day. Assume dog has at most 10^6 idols and each of them show up at a time (float) t such that 0 <= t <= 24, how many idols can he meets given a list of showup time in `idols`?
 
 Example 1: 
 
