@@ -43,7 +43,7 @@ Output: 2
 
 Dog wants to optimize cooking time so that he can cook as fast as possible. Given each ingredient in a tuple (ingredient_name, preparation_duration, cooking_duration), input `t` is a list of ingredient tuples. For example, `t = [('meat', 4, 7), ('pepper', 5, 3), ('cabbage', 5, 2), ('green onions', 1, 1)]`. In the above example, it takes 4 minutes to prepare meat, and 7 minutes to cook it.
 
-Find the minimum time it takes to cook everything. Assume dog can only prepare one ingredient at a time, but is able to cook multiple things at the same time.
+Find the minimum time it takes to cook everything. Assume dog can only prepare one ingredient at a time, but is able to cook multiple things at the same time. And he can prepare the next item while cooking. 
 
 Exmple 1: 
 
